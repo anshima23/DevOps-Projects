@@ -18,7 +18,7 @@
 
 
 
-# Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
+# DEnd-to-End DevSecOps Pipeline for Netflix Clone - DevSecOps Project!
 
 ### **Phase 1: Initial Setup and Deployment**
 
@@ -328,7 +328,9 @@ pipeline{
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
-                       sh "docker build --build-arg TMDB_V3_API_KEY=<yourapikey> -t netflix ."
+                       withCredentials([string(credentialsId: 'tmdb-api-key', variable: 'TMDB_KEY')]) {
+    sh "docker build --build-arg TMDB_V3_API_KEY=${TMDB_KEY} -t netflix ."
+}
                        sh "docker tag netflix anshima23/netflix:latest "
                        sh "docker push anshima23/netflix:latest "
                     }
