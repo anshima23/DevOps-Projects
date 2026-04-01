@@ -2,7 +2,7 @@
 ![Pipeline Overview](./src/Overview.png)
 
 ## Project Overview
-This project demonstrates deploying an Amazon Prime clone using a set of DevOps tools and practices. The primary tools include:
+This project demonstrates deploying an Scalable-Media-Streamer using a set of DevOps tools and practices. The primary tools include:
 
 - **Terraform**: Infrastructure as Code (IaC) tool to create AWS infrastructure such as EC2 instances and EKS clusters.
 - **GitHub**: Source code management.
@@ -30,8 +30,8 @@ This project demonstrates deploying an Amazon Prime clone using a set of DevOps 
 ## Infrastructure Setup Using Terraform
 1. **Clone the Repository** (Open Command Prompt & run below):
    ```bash
-   git clone https://github.com/anshima23/DevOps-Projects/tree/main/Amazon%20Prime%20Clone
-   cd AmazonPrimeClone
+   git clone https://github.com/anshima23/DevOps-Projects/tree/main/Scalable-Media-Streamer-AWS-EKS
+   cd Scalable-Media-streamer-AWS-EKS
    code .   # this command will open VS code in backend
    ```
 2. **Initialize and Apply Terraform**:
@@ -104,7 +104,7 @@ pipeline {
     stages {
         stage('1. Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/anshima23/DevOps-Projects/tree/main/Amazon%20Prime%20Clone'
+                git branch: 'main', url: 'https://github.com/anshima23/DevOps-Projects/tree/main/Scalable-Media-Streamer-AWS-EKS'
             }
         }
         
@@ -199,7 +199,7 @@ pipeline {
 
 ## Continuous Deployment with ArgoCD
 1. **Create EKS Cluster**: Use Terraform to create an EKS cluster and related resources.
-2. **Deploy Amazon Prime Clone**: Use ArgoCD to deploy the application using Kubernetes YAML files.
+2. **Deploy Scalable-Media-Streamer**: Use ArgoCD to deploy the application using Kubernetes YAML files.
 3. **Monitoring Setup**: Install Prometheus and Grafana using Helm charts for monitoring the Kubernetes cluster.
 
 ### Deployment Pipeline
