@@ -1,6 +1,6 @@
-# 🚀 **DevOps Project: ZOMATO Clone App Deployment**
+# 🚀 **DevOps Project: Cloud-Native Food-Tech Stack: Automated Deployment on K8s**
 
-In this **DevOps project**, I demonstrate how to **deploy a ZOMATO Clone App** using a variety of modern DevOps tools and services.
+In this **DevOps project**, I demonstrate how to **Cloud-Native Food-Tech Stack** using a variety of modern DevOps tools and services.
 
 ## 🛠️ Tools & Services Used:
 
