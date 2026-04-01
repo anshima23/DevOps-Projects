@@ -18,7 +18,7 @@
 
 
 
-# DEnd-to-End DevSecOps Pipeline for Netflix Clone - DevSecOps Project!
+# End-to-End DevSecOps Pipeline for Netflix Clone - DevSecOps Project!
 
 ### **Phase 1: Initial Setup and Deployment**
 
