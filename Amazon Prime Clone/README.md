@@ -1,4 +1,4 @@
-# Amazon Prime Clone Deployment Project
+# Scalable Media-Streamer on AWS EKS
 ![Pipeline Overview](./src/Overview.png)
 
 ## Project Overview
