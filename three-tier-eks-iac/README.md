@@ -54,15 +54,15 @@ kubectl logs -f -n kube-system \
 
 ```
 export DOCKER_CLI_EXPERIMENTAL=enabled
-aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/w8u5e4v2
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws<your-registry-id>
 ```
 
 Buid Front End :
 
 ```
 docker buildx build --platform linux/amd64 -t workshop-frontend:v1 . 
-docker tag workshop-frontend:v1 public.ecr.aws/w8u5e4v2/workshop-frontend:v1
-docker push public.ecr.aws/w8u5e4v2/workshop-frontend:v1
+docker tag workshop-frontend:v1 public.ecr.aws/workshop/workshop-frontend:v1
+docker push public.ecr.aws/workshop/workshop-frontend:v1
 ```
 
 
@@ -70,8 +70,8 @@ Buid Back End :
 
 ```
 docker buildx build --platform linux/amd64 -t workshop-backend:v1 . 
-docker tag workshop-backend:v1 public.ecr.aws/w8u5e4v2/workshop-backend:v1
-docker push public.ecr.aws/w8u5e4v2/workshop-backend:v1
+docker tag workshop-backend:v1 public.ecr.aws/workshop/workshop-backend:v1
+docker push public.ecr.aws/workshop/workshop-backend:v1
 ```
 
 **For Linux/Windows:**
@@ -80,8 +80,8 @@ Buid Front End :
 
 ```
 docker build -t workshop-frontend:v1 . 
-docker tag workshop-frontend:v1 public.ecr.aws/w8u5e4v2/workshop-frontend:v1
-docker push public.ecr.aws/w8u5e4v2/workshop-frontend:v1
+docker tag workshop-frontend:v1 public.ecr.aws/workshop/workshop-frontend:v1
+docker push public.ecr.aws/workshop/workshop-frontend:v1
 ```
 
 
@@ -89,8 +89,8 @@ Buid Back End :
 
 ```
 docker build -t workshop-backend:v1 . 
-docker tag workshop-backend:v1 public.ecr.aws/w8u5e4v2/workshop-backend:v1
-docker push public.ecr.aws/w8u5e4v2/workshop-backend:v1
+docker tag workshop-backend:v1 public.ecr.aws/workshop/workshop-backend:v1
+docker push public.ecr.aws/workshop/workshop-backend:v1
 ```
 
 

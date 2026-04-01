@@ -1,7 +1,8 @@
 # DevOps Project Report: Automated CI/CD Pipeline for a 2-Tier Flask Application on AWS
 
-**Author:** Anshima
-**Date:** March 31, 2026
+**Author:** Anshima  
+**Role:** Cloud & DevOps Engineer  
+**Date:** April 1, 2026
 
 ---
 
