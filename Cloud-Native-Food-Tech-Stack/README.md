@@ -99,7 +99,7 @@ Cloud-Native-Food-Tech-Stack/
 * Access to a Kubernetes Cluster (Minikube, EKS, or K3s).
 * Docker Hub account for image hosting.
 
-## 🌐 Port Configuration & Access
+### **Port Configuration & Access**
 
 Kubernetes cluster ke andar networking aur access points ko samajhne ke liye niche di gayi table ka use karein:
 
@@ -141,4 +141,5 @@ The project integrates Prometheus Node Exporter via node-service.yaml on port 91
 ---
 
 ## 🤝 Connectivity
-If you found this project helpful, let's connect!LinkedIn: [Your Profile Link Here]Portfolio: [Your Portfolio Link Here]
+If you found this project helpful, let's connect!LinkedIn: https://www.linkedin.com/in/anshima23/
+Portfolio: [Your Portfolio Link Here]
