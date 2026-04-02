@@ -30,22 +30,7 @@ The pipeline ensures that every code commit undergoes rigorous quality and secur
 
 ---
 
-## 📂 Repository Structure
 
-```text
-Cloud-Native-Food-Tech-Stack/
-├── Kubernetes/             # Declarative K8s Manifests
-│   ├── deployment.yaml      # App Deployment (2 Replicas)
-│   ├── service.yaml         # Internal Cluster Service
-│   └── node-service.yaml    # NodePort Service for Node Exporter
-├── src/                     # React.js Source Files
-│   ├── components/          # Modular UI Components
-│   └── data.js              # Application Mock Data (Cuisines, Chains)
-├── Dockerfile               # Multi-stage Docker Build Blueprint
-├── jenkinsfile              # Comprehensive DevSecOps Pipeline
-└── package.json             # Node.js Dependencies & Scripts
-
----
 
 ## 🛡️ DevSecOps Pipeline Stages
 
