@@ -55,17 +55,17 @@ The pipeline ensures that every code commit undergoes rigorous quality and secur
 ### **Local Setup**
 
 1. **Clone the Repository:**
-   ```bash
+```bash
    git clone [https://github.com/anshima23/DevOps-Projects.git](https://github.com/anshima23/DevOps-Projects.git)
    cd Cloud-Native-Food-Tech-Stack
 
-Build & Run with Docker:
-Bash
-docker build -t food-tech-app .
-docker run -p 3000:3000 food-tech-app
+2. **Build & Run with Docker:**
+```bash
+  docker build -t food-tech-app .
+  docker run -p 3000:3000 food-tech-app
 
-Apply K8s Manifests:
-Bash
+3. **Apply K8s Manifests:**
+```bash
 kubectl apply -f Kubernetes/deployment.yaml
 kubectl apply -f Kubernetes/service.yaml
 
