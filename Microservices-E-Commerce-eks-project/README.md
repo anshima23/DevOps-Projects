@@ -103,5 +103,4 @@ With dedicated jenkinsfiles for each service, the project implements a Pipeline-
 If you have any questions about this architecture or want to discuss DevSecOps, feel free to reach out!
 
 * **LinkedIn:** https://linkedin.com/in/your-profile
-* **Portfolio:** https://yourportfolio.com
-* **Email:** mailto:your.email@example.com
+* **Email:** anshima541@gmail.com
