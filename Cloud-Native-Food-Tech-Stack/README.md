@@ -45,37 +45,34 @@ Cloud-Native-Food-Tech-Stack/
 ├── jenkinsfile              # Comprehensive DevSecOps Pipeline
 └── package.json             # Node.js Dependencies & Scripts
 
+---
 
-#🛡️ DevSecOps Pipeline Stages
+## 🛡️ DevSecOps Pipeline Stages
 
-Code Analysis: Automated scans via SonarQube to ensure the code meets industry standards.
+* **Code Analysis:** Automated scans via **SonarQube** to ensure the code meets industry standards.
+* **Security Gate:** **OWASP Dependency-Check** identifies vulnerable libraries in the `package.json`.
+* **Vulnerability Scanning:** **Trivy** performs a deep scan of the filesystem and the final Docker image.
+* **Image Analysis:** **Docker Scout** provides a quickview of CVEs and offers remediation recommendations.
+* **Automated Deployment:**
+    * **Staging:** Deploying as a Docker container for immediate testing.
+    * **Production:** Orchestrating pods on **Kubernetes** with 2 replicas for high availability and load balancing.
+* **Post-Build:** Automated Email notifications with `trivy.txt` vulnerability reports attached for transparency.
 
-Security Gate: OWASP Dependency-Check identifies vulnerable libraries in the package.json.
+---
 
-Vulnerability Scanning: Trivy performs a deep scan of the filesystem and the final Docker image.
+## 🚀 Getting Started
 
-Image Analysis: Docker Scout provides a quickview of CVEs and offers remediation recommendations.
+### **Prerequisites**
+* Jenkins installed with Docker, SonarQube, and OWASP plugins.
+* Access to a Kubernetes Cluster (Minikube, EKS, or K3s).
+* Docker Hub account for image hosting.
 
-Automated Deployment:
-Staging: Deploying as a Docker container for testing.
-Production: Orchestrating pods on Kubernetes with 2 replicas for load balancing.
+### **Local Setup**
 
-Post-Build: Automated Email notifications with trivy.txt vulnerability reports attached.
-
-#🚀 Getting Started
-
-Prerequisites
-
-Jenkins with Docker, SonarQube, and OWASP plugins.
-Kubernetes Cluster (Minikube/EKS/K3s).
-Docker Hub account for image registry.
-
-Local Setup
-
-Clone the Repo:
-Bash
-git clone https://github.com/anshima23/DevOps-Projects.git
-cd Cloud-Native-Food-Tech-Stack
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/anshima23/DevOps-Projects.git](https://github.com/anshima23/DevOps-Projects.git)
+   cd Cloud-Native-Food-Tech-Stack
 
 Build & Run with Docker:
 Bash
