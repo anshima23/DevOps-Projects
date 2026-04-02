@@ -1,29 +1,39 @@
-#🚀 Cloud-Native Food-Tech Stack: End-to-End DevSecOps Pipeline
-This project demonstrates a high-scale, Cloud-Native Food-Tech Application (Zomato Clone) deployed on Kubernetes using a robust DevSecOps framework. It automates everything from code quality analysis to security vulnerability scanning and multi-stage deployment.
+# 🚀 Cloud-Native Food-Tech Stack: End-to-End DevSecOps Pipeline
 
-#🏗️ Architecture OverviewThe pipeline ensures that every code commit undergoes rigorous quality and security checks before reaching the production environment.
+This project demonstrates a high-scale, **Cloud-Native Food-Tech Application** (Zomato Clone) deployed on **Kubernetes** using a robust **DevSecOps** framework. It automates everything from code quality analysis to security vulnerability scanning and multi-stage deployment.
 
-Frontend: React.js (Node 16 based)
-CI/CD: Jenkins (Pipeline-as-Code)
-Security (Shift-Left): SonarQube, OWASP Dependency-Check, Trivy, and Docker Scout.
-Orchestration: Kubernetes (EKS/Self-managed)
-Monitoring: Prometheus Node Exporter integration.
+---
 
-#🛠️ Tech Stack & Integration
+## 🏗️ Architecture Overview
+The pipeline ensures that every code commit undergoes rigorous quality and security checks before reaching the production environment.
 
-CategoryToolsPurpose
-CI/CD Jenkins Pipeline Orchestration
-SAST SonarQube Code Quality & Static Analysis
-SCA OWASP & Trivy File System & Dependency Vulnerability
-Container Docker Application Containerization
-Image Security Docker Scout Real-time Image CVE Analysis
-Orchestration Kubernetes High Availability & Scaling
-Monitoring Prometheus Infrastructure Health Metrics
-Notification Email-ext Automated Build Reports
+* **Frontend:** React.js (Node 16 based)
+* **CI/CD:** Jenkins (Pipeline-as-Code)
+* **Security (Shift-Left):** SonarQube, OWASP Dependency-Check, Trivy, and Docker Scout.
+* **Orchestration:** Kubernetes (EKS/Self-managed)
+* **Monitoring:** Prometheus Node Exporter integration.
 
-#📂 Repository Structure
+---
 
-PlaintextCloud-Native-Food-Tech-Stack/
+## 🛠️ Tech Stack & Integration
+
+| Category | Tools | Purpose |
+| :--- | :--- | :--- |
+| **CI/CD** | Jenkins | Pipeline Orchestration |
+| **SAST** | SonarQube | Code Quality & Static Analysis |
+| **SCA** | OWASP & Trivy | File System & Dependency Vulnerability |
+| **Container** | Docker | Application Containerization |
+| **Image Security**| Docker Scout | Real-time Image CVE Analysis |
+| **Orchestration** | Kubernetes | High Availability & Scaling |
+| **Monitoring** | Prometheus | Infrastructure Health Metrics |
+| **Notification** | Email-ext | Automated Build Reports |
+
+---
+
+## 📂 Repository Structure
+
+```text
+Cloud-Native-Food-Tech-Stack/
 ├── Kubernetes/             # Declarative K8s Manifests
 │   ├── deployment.yaml      # App Deployment (2 Replicas)
 │   ├── service.yaml         # Internal Cluster Service
