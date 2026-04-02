@@ -140,6 +140,10 @@ The project integrates Prometheus Node Exporter via node-service.yaml on port 91
 
 ---
 
-## 🤝 Connectivity
-If you found this project helpful, let's connect!LinkedIn: https://www.linkedin.com/in/anshima23/
-Portfolio: [Your Portfolio Link Here]
+## 🤝 Let's Connect
+
+If you have any questions about this architecture or want to discuss DevSecOps, feel free to reach out!
+
+* **LinkedIn:** https://linkedin.com/in/your-profile
+* **Portfolio:** https://yourportfolio.com
+* **Email:** mailto:your.email@example.com

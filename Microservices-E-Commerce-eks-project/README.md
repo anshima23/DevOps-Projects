@@ -50,9 +50,9 @@ The ecr-terraform module automates the creation of private repositories for each
 3. **Polyglot CI/CD Pipeline**
 With dedicated jenkinsfiles for each service, the project implements a Pipeline-as-Code strategy. It handles:
 
-*Building Docker images from the src/ directory.
-*Pushing images to Amazon ECR.
-*Rolling updates to the EKS Cluster using manifests in kubernetes-files/.
+* **Building Docker images from the src/ directory.**
+* **Pushing images to Amazon ECR.**
+* **Rolling updates to the EKS Cluster using manifests in kubernetes-files/.**
 
 ---
 
@@ -99,5 +99,9 @@ With dedicated jenkinsfiles for each service, the project implements a Pipeline-
 4. CI/CD Pipeline:  Configure Jenkins to use the files in the jenkinsfiles/ directory to automate the src/ builds.
 
 ## 🤝 Let's Connect
-!LinkedIn: [Your Profile Link Here]
-Portfolio: [Your Portfolio Link Here]
+
+If you have any questions about this architecture or want to discuss DevSecOps, feel free to reach out!
+
+* **LinkedIn:** https://linkedin.com/in/your-profile
+* **Portfolio:** https://yourportfolio.com
+* **Email:** mailto:your.email@example.com
