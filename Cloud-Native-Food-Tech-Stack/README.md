@@ -4,23 +4,6 @@ This project demonstrates a high-scale, **Cloud-Native Food-Tech Application** (
 
 ---
 
-# 📂 Repository Structure
-
-```text
-Cloud-Native-Food-Tech-Stack/
-├── Kubernetes/             # Declarative K8s Manifests
-│   ├── deployment.yaml      # App Deployment (2 Replicas)
-│   ├── service.yaml         # Internal Cluster Service
-│   └── node-service.yaml    # NodePort Service for Node Exporter
-├── src/                     # React.js Source Files
-│   ├── components/          # Modular UI Components
-│   └── data.js              # Application Mock Data (Cuisines, Chains)
-├── Dockerfile               # Multi-stage Docker Build Blueprint
-├── jenkinsfile              # Comprehensive DevSecOps Pipeline
-└── package.json             # Node.js Dependencies & Scripts
-
-```
-
 ## 🏗️ Architecture Overview
 The pipeline ensures that every code commit undergoes rigorous quality and security checks before reaching the production environment.
 
@@ -71,6 +54,30 @@ The pipeline ensures that every code commit undergoes rigorous quality and secur
 
 ---
 
+## 🛡️ DevSecOps Approach: Shift-Left Security
+In this project, security is not an afterthought but integrated at every stage:
+* **Pre-Build:** Trivy scans the file system for vulnerabilities in dependencies.
+* **During Build:** OWASP Dependency-Check analyzes the `package.json` for known CVEs.
+* **Post-Build:** Docker Scout performs real-time analysis on the container image before deployment to production.
+
+---
+
+# 📂 Repository Structure
+
+```text
+Cloud-Native-Food-Tech-Stack/
+├── Kubernetes/             # Declarative K8s Manifests
+│   ├── deployment.yaml      # App Deployment (2 Replicas)
+│   ├── service.yaml         # Internal Cluster Service
+│   └── node-service.yaml    # NodePort Service for Node Exporter
+├── src/                     # React.js Source Files
+│   ├── components/          # Modular UI Components
+│   └── data.js              # Application Mock Data (Cuisines, Chains)
+├── Dockerfile               # Multi-stage Docker Build Blueprint
+├── jenkinsfile              # Comprehensive DevSecOps Pipeline
+└── package.json             # Node.js Dependencies & Scripts
+
+```
 
 ## 🛡️ DevSecOps Pipeline Stages
 
@@ -91,6 +98,19 @@ The pipeline ensures that every code commit undergoes rigorous quality and secur
 * Jenkins installed with Docker, SonarQube, and OWASP plugins.
 * Access to a Kubernetes Cluster (Minikube, EKS, or K3s).
 * Docker Hub account for image hosting.
+
+## 🌐 Port Configuration & Access
+
+Kubernetes cluster ke andar networking aur access points ko samajhne ke liye niche di gayi table ka use karein:
+
+| Service | Port | Access Type | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Application (Frontend)** | 3000 | Container Port | Main Web UI |
+| **Node Exporter** | 9100 | NodePort / Monitoring | Infrastructure Metrics |
+| **SonarQube** | 9000 | External Tool | Static Code Analysis |
+| **Jenkins** | 8080 | CI Engine | Pipeline Orchestration |
+
+---
 
 ### **Local Setup**
 
@@ -114,27 +134,6 @@ The pipeline ensures that every code commit undergoes rigorous quality and secur
    ```
 
   --- 
-
- ## 🛡️ DevSecOps Approach: Shift-Left Security
-In this project, security is not an afterthought but integrated at every stage:
-* **Pre-Build:** Trivy scans the file system for vulnerabilities in dependencies.
-* **During Build:** OWASP Dependency-Check analyzes the `package.json` for known CVEs.
-* **Post-Build:** Docker Scout performs real-time analysis on the container image before deployment to production.
-
----
-
-## 🌐 Port Configuration & Access
-
-Kubernetes cluster ke andar networking aur access points ko samajhne ke liye niche di gayi table ka use karein:
-
-| Service | Port | Access Type | Purpose |
-| :--- | :--- | :--- | :--- |
-| **Application (Frontend)** | 3000 | Container Port | Main Web UI |
-| **Node Exporter** | 9100 | NodePort / Monitoring | Infrastructure Metrics |
-| **SonarQube** | 9000 | External Tool | Static Code Analysis |
-| **Jenkins** | 8080 | CI Engine | Pipeline Orchestration |
-
----
 
 ## 📊 Monitoring Strategy
 The project integrates Prometheus Node Exporter via node-service.yaml on port 9100. This allows the DevOps team to monitor hardware and OS metrics of the K8s nodes in real-time.
